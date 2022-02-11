@@ -18,9 +18,7 @@ RUN wget https://github.com/yarnpkg/yarn/releases/download/v1.9.4/yarn_1.9.4_all
 WORKDIR $APP_HOME
 
 # Railsプロジェクト初期化
-RUN bundle init
-RUN echo 'gem "rails", ">= 6", "< 7"' >> Gemfile
-RUN bundle install
+RUN gem install rails '< 7'
 
 
 CMD ["/bin/bash"]
