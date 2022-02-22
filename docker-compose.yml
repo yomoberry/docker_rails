@@ -8,12 +8,13 @@ services:
       - ./env_ap.env
     container_name: app_1
     ports:
-      - "3000:3000"
+      - 3000:3000
+    volumes:
+      - ./app:/var/app
     tty: true
   db:
     image: mysql:5.7
-    # M1 Mac 以外はこの行いらない
-    platform: linux/x86_64
+    platform: linux/x86_64 # M1 Mac 以外はこの行いらない
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     container_name: app_1_db
     env_file:
