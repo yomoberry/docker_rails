@@ -18,7 +18,7 @@ RUN wget https://github.com/yarnpkg/yarn/releases/download/v1.9.4/yarn_1.9.4_all
 WORKDIR $APP_HOME
 
 # Railsプロジェクト初期化
-RUN gem install rails '< 7'
+RUN gem install rails 6
 
 
 CMD ["/bin/bash"]
