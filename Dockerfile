@@ -21,4 +21,8 @@ WORKDIR $APP_HOME
 RUN gem install rails 6
 
 
+# 作成（cloneするつもりなら消す）
+RUN rails new sample -d mysql --api
+
+
 CMD ["/bin/bash"]
